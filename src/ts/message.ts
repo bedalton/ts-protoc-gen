@@ -51,7 +51,7 @@ export function printMessage(fileName: string, exportMap: ExportMap, messageDesc
   printer.printLn(`export class ${messageName} extends jspb.Message {`);
 
   const oneOfGroups: Array<Array<FieldDescriptorProto>> = [];
-
+  printer.printIndentedLn(`constuctor(data:${messageName}.AsObject)`);
   messageDescriptor.getFieldList().forEach(field => {
     if (field.hasOneofIndex()) {
       const oneOfIndex = field.getOneofIndex();
