@@ -194,6 +194,7 @@ export function printMessage(fileName: string, exportMap: ExportMap, messageDesc
 
   printer.printIndentedLn(`serializeBinary(): Uint8Array;`);
   printer.printIndentedLn(`toObject(includeInstance?: boolean): ${messageName}.${objectTypeName};`);
+  printer.printIndentedLn(`cloneMessage(): ${messageName};`);
   printer.printIndentedLn(`static toObject(includeInstance: boolean, msg: ${messageName}): ${messageName}.${objectTypeName};`);
   printer.printIndentedLn(`static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};`);
   printer.printIndentedLn(`static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};`);
